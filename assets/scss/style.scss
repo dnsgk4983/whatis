@@ -1,0 +1,117 @@
+@import 'font';
+@import 'reset';
+@import 'variable';
+@import 'mixin';
+
+html {
+    &.scroll-top {
+        .wadiz {
+            &__header {
+                top: 0;
+                &__web {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.wadiz {
+    &__header {
+        z-index: 99;
+        position: static;
+        top: -48px;
+        width: 100%;
+        transition: all .25s;
+        &__web {
+            display: none;
+            &__wrapper {
+                z-index: 9998;
+                position: relative;
+                top: 0;
+                width: 100%;
+                height: 56px;
+                border-bottom: 1px solid #f0f2f5;
+                padding: 0;
+                background-color: #fff;
+            }
+            &__container {
+                max-width: 1440px;
+                margin: 0 auto;
+                padding: 0 60px;
+                .header{
+                    &__left {
+                        h1 {
+                            position: absolute;
+                            top: 0;
+                            left: 16px;
+                            display: inline-block;
+                            margin: 0;
+                            line-height: 22px;
+                            font-size: 32px;
+                            a {
+                                display: block;
+                                padding: 11px 0 13px;
+                                .label {
+                                    display: block;
+                                    position: absolute;
+                                    left: -9999px;
+                                    visibility: none;
+                                    height: 1px;
+                                }
+                            }
+                            @include min1097 {
+                                position: static;
+                                a {
+                                    padding: 14px 0 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__visual {
+        &__image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+                            url(https://static.wadiz.kr/landing/media/keyvisual-background-desktop.5d6149b7.jpg);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover;
+        }
+        &__label {
+            position: fixed;
+            top: 200px;
+            text-align: center;
+            left: 50%;
+            font-weight: bold;
+            color: $font-white;
+            transform: translateX(-50%);
+            span {
+                font-size: 2.5rem;
+            }
+            p {
+                margin-top: 1rem;
+                font-size: 2.25rem;
+            }
+        }
+        &__title {
+            position: fixed;
+            top: 342px;
+            left: 50%;
+            transform: translateX(-50%);
+            h1 {
+                font-size: 8rem;
+                font-weight: 700;
+                text-align: center;
+                color: $font-white;
+                letter-spacing: 0.375rem;
+            }
+        }
+    }
+}
