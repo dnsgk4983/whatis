@@ -16,6 +16,12 @@ html {
     }
 }
 .wadiz {
+    &__wrapper {
+        transform-origin: 50% 0;
+        transition-property: opacity,transform;
+        transition-duration: 80ms;
+        transition-timing-function: ease-out;
+    }
     &__header {
         z-index: 99;
         position: static;
@@ -36,10 +42,15 @@ html {
             }
             &__container {
                 max-width: 1440px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 margin: 0 auto;
                 padding: 0 60px;
                 .header{
                     &__left {
+                        display: flex;
+                        align-items: center;
                         h1 {
                             position: absolute;
                             top: 0;
@@ -66,12 +77,37 @@ html {
                                 }
                             }
                         }
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            margin-left: 24px;
+                            li {
+                                a {
+                                    position: relative;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    line-height: 30px;
+                                    text-decoration: none;
+                                    color: $font-black;
+                                    transition: .2s;
+                                    padding: 14px 16px;
+                                }
+                            }
+                        }
+                    }
+
+                    &__right {
+
                     }
                 }
             }
         }
     }
     &__visual {
+        position: relative;
+        height: 300vh;
+        transition: .3s;
+        margin-bottom: 100vh;
         &__image {
             position: fixed;
             top: 0;
@@ -111,6 +147,71 @@ html {
                 text-align: center;
                 color: $font-white;
                 letter-spacing: 0.375rem;
+            }
+        }
+    }
+    &__footer {
+        font-size: 12px;
+        padding-top: 120px;
+        background: #fff;
+        &.inner-utils {
+            position: relative;
+        }
+        &__menu {
+            border-top: 1px solid #e6eaed;
+            border-bottom: 1px solid #e6eaed;
+            text-align: left;
+            @include min1097 {
+                height: 56px;
+            }
+            &__bar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 16px 0 8px;
+                @include min1097{
+                    max-width: 1440px;
+                    margin: 8px auto;
+                    padding: 0 80px
+                };
+                .btn {
+                    display: inline-block;
+                    cursor: pointer;
+                    padding-left: 16px;
+                    width: 50%;
+                    height: 40px;
+                    text-align: left;
+                    line-height: 40px;
+                    color: rgba(0,0,0,.84);
+                    font-size: 14px;
+                    &.btnCenter {
+                        display: flex;
+                        align-items: center;
+                    }
+                    &.btnPrivacy {
+                        font-weight: 700;
+                    }
+
+                    @include min1097 {
+                        margin-right: 24px;
+                        padding: 0 8px;
+                        width: auto;
+                    }
+                    .chevron-right {
+                        display: inline-block!important;
+                        transform: rotate(90deg);
+                        margin-left: 4px;
+                        color: rgba(0,0,0,.54);
+                    }
+                }
+                &__left {
+                    display: flex;
+                    align-items: center;
+                }
+                &__right {
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
     }
