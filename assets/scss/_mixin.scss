@@ -3,3 +3,6 @@
         @content;
     }
 }
+@mixin boxSizing($size) {
+    box-sizing: $size;
+}

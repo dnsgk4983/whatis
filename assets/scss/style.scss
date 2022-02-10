@@ -214,5 +214,222 @@ html {
                 }
             }
         }
+
+        // 푸터 하단 부분
+        &__container {
+            color: #7c8288;
+            padding: 24px 16px 160px;
+            .infoSection {
+                margin-bottom: 16px;
+                &__inner {
+                    &__cell {
+                        display: inline-block;
+                        line-height: 20px;
+                        word-break: keep-all;
+                        word-wrap: break-word;
+                        button {
+                            width: 157px;
+                            line-height: 40px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #fff;
+                            letter-spacing: 0;
+                            margin-bottom: 12px;
+                            border-radius: 28px;
+                            vertical-align: middle;
+                            background: $font-black;
+                            svg {
+                                display: inline-block;
+                                width: 16px;
+                                height: 16px;
+                                vertical-align: middle;
+                                margin: -2px 6px 0 0;
+                            }
+                        }
+                        &.callCenter {
+                            em {
+                                display: block;
+                                letter-spacing: -.2px;
+                                font-size: 12px;
+                                line-height: 18px;
+                                font-weight: 700;
+                                color: #495057;
+                            }
+                            ul {
+                                li {
+                                    text-align: left;
+                                    padding-left: 0;
+                                    &:last-child {
+                                        &::before {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                            p {
+                                font-size: 10px;
+                                margin-top: 16px;
+                            }
+                        }
+                        &__corp {
+                            line-height: 22.5px;
+                            li {
+                                display: inline-block;
+                                word-break: keep-all;
+                                word-wrap: break-word;
+                                &::after {
+                                    content: "";
+                                    background: $font-grey;
+                                    display: inline-block;
+                                    width: 1px;
+                                    height: 10px;
+                                    margin: 0 7px;
+                                    vertical-align: -1px;
+                                }
+                            }
+                        }
+                        address {
+                            display: inline-block;
+                            margin-top: 16px;
+                            color: rgba(0,0,0,.84);
+                            font-weight: 900;
+                        }
+                    }
+                    &__call {
+                        max-width: 320px;
+                        ul {
+                            li {
+                                position: relative;
+                                display: inline-block;
+                                min-width: 130px;
+                                text-align: center;
+                                padding: 0 8px;
+                                @include boxSizing(content-box);
+                                &:first-child {
+                                    padding-right: 8px;
+                                }
+                                &:last-child {
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        top: 4px;
+                                        bottom: 4px;
+                                        left: 0;
+                                        background-color: #dde2e6;
+                                        width: 1px;
+                                    }
+                                }
+                                em {
+                                    display: block;
+                                    line-height: 18px;
+                                    letter-spacing: 0;
+                                    font-size: 12px;
+                                    font-weight: 700;
+                                    letter-spacing: -.2px;
+                                    color: #495057;
+                                }
+                                span {
+                                    display: block;
+                                    line-height: 28px;
+                                    letter-spacing: -.3px;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    color: #212529;
+                                    margin-top: 4px;
+                                }
+                            }
+                        }
+                        p {
+                            margin: 8px 0 24px;
+                            color: $font-grey;
+                        }
+                    }
+                    &__contact {
+                        margin-bottom: 13px;
+                        vertical-align: top;
+                    }
+                }
+                &.third {
+                    &__inner {
+
+                    }
+                }
+            }
+            @include min1097 {
+                padding: 0;
+                &__inner {
+                    position: relative;
+                    display: flex;
+                    max-width: 1440px;
+                    margin: 0 auto;
+                    padding: 0 80px;
+                }
+                .infoSection {
+                    @include boxSizing(content-box);
+                    margin-bottom: 0;
+                    padding-right: 80px;
+                    &.first {
+                        max-width: 510px;
+                        width: calc(50% - 90px);
+                        margin-bottom: 0;
+                    }
+                    &.second {
+                        width: 50%;
+                        max-width: 364px;
+                        padding-right: 20px;
+                    }
+                    &.third {
+                        a {
+                            display: inline-block;
+                            width: 50%;
+                            padding: 15px 0;
+                            text-align: center;
+                        }
+                    }
+                    &__inner {
+                        padding: 32px 0;
+                        &__cell {
+                            button {
+                                width: 187px;
+                                line-height: 48px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                margin-right: 24px;
+                                margin-bottom: 0;
+                                letter-spacing: -.3px;
+                                svg {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                            &__corp {
+                                li {
+                                    &:last-child {
+                                        &::after {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                            address {
+                                margin-top: 0;
+                            }
+                        }
+                        &__call {
+                            display: inline-block;
+                            width: 295px;
+                        }
+
+                        &.third__inner {
+                            position: absolute;
+                            top: 30px;
+                            a {
+                                width: 120px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
