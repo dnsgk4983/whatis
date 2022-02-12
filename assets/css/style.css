@@ -41,6 +41,10 @@ q:before, q:after {
   content: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -180,6 +184,265 @@ html.scroll-top .wadiz__header__web {
   color: #fff;
   letter-spacing: 0.375rem;
 }
+.wadiz__gift {
+  z-index: 100;
+  position: relative;
+  padding: 80px 0;
+  background-color: #fff;
+}
+.wadiz__gift__inner {
+  color: #212529;
+  padding: 0 24px;
+}
+.wadiz__gift__inner__title {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.wadiz__gift__inner__title h3 {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 24px;
+}
+.wadiz__gift__inner__title h3 span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  padding-bottom: 4px;
+}
+.wadiz__gift__inner__title p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #495057;
+}
+.wadiz__gift__inner__title p span {
+  display: block;
+}
+.wadiz__gift__inner__title strong {
+  letter-spacing: -0.6px;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 16px;
+}
+.wadiz__gift__inner ul {
+  padding-bottom: 6px;
+  background-color: #fff;
+}
+.wadiz__gift__inner ul li {
+  position: relative;
+  margin-bottom: 32px;
+  height: 128px;
+  overflow: hidden;
+}
+.wadiz__gift__inner ul li .product {
+  display: inline-flex;
+  align-items: center;
+}
+.wadiz__gift__inner ul li .product .img-wrap {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-right: 24px;
+}
+.wadiz__gift__inner ul li .product .img-wrap img {
+  width: 100%;
+}
+.wadiz__gift__inner ul li .product .detail {
+  flex: 1 1;
+}
+.wadiz__gift__inner ul li .product .detail h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-height: 28px;
+}
+.wadiz__gift__inner ul li .product .detail h5 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #495057;
+}
+.wadiz__gift__inner ul li .product .detail h5 span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #adb5bd;
+  padding-right: 4px;
+}
+.wadiz__gift__inner ul li .product .detail p {
+  line-height: 28px;
+  letter-spacing: -0.3px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: #e7f9f9;
+  padding: 0 12px;
+  color: #00b2b2;
+}
+@media (min-width: 769px) {
+  .wadiz__gift {
+    text-align: center;
+  }
+  .wadiz__gift__inner__title h3 {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 700;
+  }
+  .wadiz__gift__inner__title p span {
+    display: inline;
+  }
+  .wadiz__gift__inner__title strong {
+    display: block;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .wadiz__gift__inner ul {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .wadiz__gift__inner ul li {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    margin: 0 40px 64px;
+    padding-left: 0;
+  }
+  .wadiz__gift__inner ul li .product {
+    display: inline-block;
+  }
+  .wadiz__gift__inner ul li .product .img-wrap {
+    width: 200px;
+    height: 200px;
+    margin-right: 0;
+  }
+  .wadiz__gift__inner ul li .product .detail {
+    text-align: center;
+  }
+  .wadiz__gift__inner ul li .product .detail h3 {
+    margin-top: 31px;
+  }
+  .wadiz__gift__inner ul li .product .detail h5 {
+    margin-bottom: 0;
+  }
+  .wadiz__gift__inner ul li .product .detail p {
+    display: block;
+    position: absolute;
+    top: 185px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.wadiz__trend__share {
+  position: relative;
+  text-align: center;
+  padding: 120px 0;
+  background-position: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/img_share_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wadiz__trend__share h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 34px;
+  margin-bottom: 24px;
+}
+.wadiz__trend__share button {
+  width: 56px;
+  height: 56px;
+  font-size: 25px;
+  color: #fff;
+  outline: none;
+  margin: 0 12px;
+  padding: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.wadiz__trend__share button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.wadiz__trend__share button svg {
+  display: block;
+  transition: transform 0.3s ease-out;
+  transform: scale(1);
+  width: 1em;
+  height: 1em;
+  margin: auto;
+  fill: currentColor;
+}
+@media (min-width: 1097px) {
+  .wadiz__trend__share h2 {
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 40px;
+  }
+}
+.wadiz__trend__action {
+  z-index: 100;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+}
+.wadiz__trend__action__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  padding: 16px 0;
+}
+.wadiz__trend__action__inner__text {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #212529;
+}
+.wadiz__trend__action__inner button {
+  position: relative;
+  appearance: none;
+  line-height: 1.75;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  padding: 9px 24px;
+  border: none;
+  border: 1px solid #00c4c4;
+  border-radius: 3px;
+  background-color: #00c4c4;
+  transition: 0.3s;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+}
+.wadiz__trend__action__inner button:hover {
+  border-color: #00b2b2;
+  background-color: #00b2b2;
+}
+@media (min-width: 769px) {
+  .wadiz__trend__action {
+    box-shadow: 0 -3px 3px -1px rgba(10, 22, 70, 0.1), 0 0 5px 0 rgba(10, 22, 70, 0.06);
+  }
+  .wadiz__trend__action__inner button {
+    width: 350px;
+  }
+}
 .wadiz__footer {
   font-size: 12px;
   padding-top: 120px;
@@ -225,6 +488,13 @@ html.scroll-top .wadiz__header__web {
 .wadiz__footer__menu__bar .btn.btnCenter {
   display: flex;
   align-items: center;
+}
+.wadiz__footer__menu__bar .btn.btnCenter svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 4px;
+  vertical-align: text-top;
 }
 .wadiz__footer__menu__bar .btn.btnPrivacy {
   font-weight: 700;

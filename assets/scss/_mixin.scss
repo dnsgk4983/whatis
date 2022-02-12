@@ -3,6 +3,11 @@
         @content;
     }
 }
+@mixin unMobile {
+    @media (min-width: 769px) {
+        @content;
+    }
+}
 @mixin boxSizing($size) {
     box-sizing: $size;
 }

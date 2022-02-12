@@ -150,6 +150,272 @@ html {
             }
         }
     }
+    &__gift {
+        z-index: 100;
+        position: relative;
+        padding: 80px 0;
+        background-color: #fff;
+        &__inner {
+            color: $font-black;
+            padding: 0 24px;
+            &__title {
+                text-align: center;
+                margin-bottom: 64px;
+                h3 {
+                    font-size: 36px;
+                    line-height: 48px;
+                    font-weight: 700;
+                    color: $font-black;
+                    margin-bottom: 24px;
+                    span {
+                        display: block;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        padding-bottom: 4px;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: #495057;
+                    span {
+                        display: block;
+                    }
+                }
+                strong {
+                    letter-spacing: -.6px;
+                    line-height: 30px;
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-top: 16px;
+                }
+            }
+            ul {
+                padding-bottom: 6px;
+                background-color: #fff;
+                li {
+                    position: relative;
+                    margin-bottom: 32px;
+                    height: 128px;
+                    overflow: hidden;
+                    .product {
+                        display: inline-flex;
+                        align-items: center;
+                        .img-wrap {
+                            display: block;
+                            width: 120px;
+                            height: 120px;
+                            margin-right: 24px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .detail {
+                            flex: 1 1;
+                            h3 {
+                                font-size: 18px;
+                                font-weight: 700;
+                                margin: 0 0 4px;
+                                word-break: keep-all;
+                                overflow-wrap: break-word;
+                                line-height: 28px;
+                            }
+                            h5 {
+                                font-size: 16px;
+                                font-weight: 700;
+                                line-height: 28px;
+                                color: #495057;
+                                span {
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 20px;
+                                    color: #adb5bd;
+                                    padding-right: 4px;
+                                }
+                            }
+                            p {
+                                line-height: 28px;
+                                letter-spacing: -.3px;
+                                font-size: 16px;
+                                font-weight: 700;
+                                border-radius: 5px;
+                                background-color: #e7f9f9;
+                                padding: 0 12px;
+                                color: #00b2b2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include unMobile {
+            text-align: center;
+            &__inner {
+                &__title {
+                    h3 {
+                        font-size: 40px;
+                        line-height: 52px;
+                        font-weight: 700;
+                    }
+                    p {
+                        span {
+                            display: inline;
+                        }
+                    }
+                    strong {
+                        display: block;
+                        line-height: 34px;
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                }
+                ul {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding-bottom: 0;
+                    text-align: center;
+                    li {
+                        display: inline-block;
+                        width: 200px;
+                        height: auto;
+                        margin: 0 40px 64px;
+                        padding-left: 0;
+                        .product {
+                            display: inline-block;
+                            .img-wrap {
+                                width: 200px;
+                                height: 200px;
+                                margin-right: 0;
+                            }
+                            .detail {
+                                text-align: center;
+                                h3 {
+                                    margin-top: 31px;
+                                }
+                                h5 {
+                                    margin-bottom: 0;
+                                }
+                                p {
+                                    display: block;
+                                    position: absolute;
+                                    top: 185px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__trend {
+        &__share {
+            position: relative;
+            text-align: center;
+            padding: 120px 0;
+            background-position: 50%;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('#{$img-path}/img_share_background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            h2 {
+                font-size: 24px;
+                font-weight: 700;
+                color: $font-white;
+                line-height: 34px;
+                margin-bottom: 24px;
+            }
+            button {
+                width: 56px;
+                height: 56px;
+                font-size: 25px;
+                color: $font-white;
+                outline: none;
+                margin: 0 12px;
+                padding: 0;
+                border: 1px solid #adb5bd;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.1);
+                transition: all .3s;
+                cursor: pointer;
+                &:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+
+                svg {
+                    display: block;
+                    transition: transform .3s ease-out;
+                    transform: scale(1);
+                    width: 1em;
+                    height: 1em;
+                    margin: auto;
+                    fill: currentColor;
+                }
+                @include boxSizing(border-box);
+            }
+            @include min1097 {
+                h2 {
+                    font-size: 32px;
+                    line-height: 44px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        &__action {
+            z-index: 100;
+            position: fixed;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: #fff;
+            &__inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1000px;
+                margin: auto;
+                padding: 16px 0;
+                &__text {
+                    font-size: 18px;
+                    line-height: 20px;
+                    font-weight: 700;
+                    color: $font-black;
+                }
+                button {
+                    position: relative;
+                    appearance: none;
+                    line-height: 1.75;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-align: center;
+                    color: $font-white;
+                    padding: 9px 24px;
+                    border: none;
+                    border: 1px solid #00c4c4;
+                    border-radius: 3px;
+                    background-color: #00c4c4;
+                    transition: .3s;
+                    box-sizing: border-box;
+                    outline: none;
+                    cursor: pointer;
+                    &:hover {
+                        border-color: #00b2b2;;
+                        background-color: #00b2b2;;
+                    }
+                }
+            }
+            @include unMobile {
+                box-shadow: 0 -3px 3px -1px rgb(10 22 70 / 10%), 0 0 5px 0 rgb(10 22 70 / 6%);
+                &__inner {
+                    button {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
     &__footer {
         font-size: 12px;
         padding-top: 120px;
@@ -187,6 +453,13 @@ html {
                     &.btnCenter {
                         display: flex;
                         align-items: center;
+                        svg {
+                            display: inline-block;
+                            width: 1em;
+                            height: 1em;
+                            margin-left: 4px;
+                            vertical-align: text-top;
+                        }
                     }
                     &.btnPrivacy {
                         font-weight: 700;
