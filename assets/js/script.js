@@ -34,9 +34,9 @@ document.addEventListener(`wheel`, (e) => {
 });
 
 const reivewSwiper = new Swiper('.wadiz__review .swiper', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 16,
-    breakpoint: {
+    breakpoints: {
         768: {
             slidesPerView: 1,
         },
