@@ -23,14 +23,14 @@ document.addEventListener(`wheel`, (e) => {
         visualText01.classList.add('show');
         visualText02.classList.remove('show');
     } else if (scroll > ((visual.offsetHeight) / 3) * 2) {
+
+        visualImage.classList.add('black');
+        visualLabel.style.opacity = 0.5;
+        visualTitle.style.opacity = 0;
         visualText01.classList.remove('show');
         visualText02.classList.add('show');
         visual.classList.remove('end');
-    } else {
-        visual.classList.add('end')
     }
-
-    console.log(((visual.offsetHeight) / 3) * 1.2);
 });
 
 const reivewSwiper = new Swiper('.wadiz__review .swiper', {
