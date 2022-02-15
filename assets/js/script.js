@@ -8,7 +8,7 @@ let zoom = 1;
 let base = 0;
 const ZOOM_SPEED = 0.00033;
 
-document.addEventListener(`wheel`, (e) => {
+document.addEventListener(`scroll`, (e) => {
     let scroll = window.scrollY;
     if (scroll < (visual.offsetHeight / 3)) {
         visualImage.style.transform = `scale(${1 + (scroll * ZOOM_SPEED)})`;
